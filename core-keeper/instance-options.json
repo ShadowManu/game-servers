@@ -1,0 +1,60 @@
+{
+  "MaxCount": 1,
+  "MinCount": 1,
+  "ImageId": "ami-0e86e20dae9224db8",
+  "InstanceType": "t3a.medium",
+  "KeyName": "AWS Personal",
+  "EbsOptimized": true,
+  "BlockDeviceMappings": [
+    {
+      "DeviceName": "/dev/sda1",
+      "Ebs": {
+        "Encrypted": false,
+        "DeleteOnTermination": true,
+        "Iops": 3000,
+        "SnapshotId": "snap-0a00520ef60a68bed",
+        "VolumeSize": 8,
+        "VolumeType": "gp3",
+        "Throughput": 125
+      }
+    }
+  ],
+  "NetworkInterfaces": [
+    {
+      "AssociatePublicIpAddress": true,
+      "DeviceIndex": 0,
+      "Groups": ["sg-0ed399c2fed504b65"]
+    }
+  ],
+  "CreditSpecification": {
+    "CpuCredits": "unlimited"
+  },
+  "TagSpecifications": [
+    {
+      "ResourceType": "instance",
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "s5"
+        }
+      ]
+    }
+  ],
+  "InstanceMarketOptions": {
+    "MarketType": "spot",
+    "SpotOptions": {
+      "InstanceInterruptionBehavior": "stop",
+      "SpotInstanceType": "persistent"
+    }
+  },
+  "MetadataOptions": {
+    "HttpEndpoint": "enabled",
+    "HttpPutResponseHopLimit": 2,
+    "HttpTokens": "required"
+  },
+  "PrivateDnsNameOptions": {
+    "HostnameType": "resource-name",
+    "EnableResourceNameDnsARecord": true,
+    "EnableResourceNameDnsAAAARecord": false
+  }
+}

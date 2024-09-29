@@ -1,0 +1,10 @@
+services:
+  core-keeper:
+    image: escaping/core-keeper-dedicated
+    volumes:
+      - ./dedicated:/home/steam/core-keeper-dedicated
+      - ./data:/home/steam/core-keeper-data
+    env_file:
+      - ./core.env
+    restart: always
+    stop_grace_period: 2m
