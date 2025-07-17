@@ -20,6 +20,6 @@ services:
       # Game
       - AdditionalArgs=-SandboxIniPath=Config/WindowsServer/sandbox.ini
     volumes:
-      - ./server:/server
+      - ./gamefiles:/server
       - ./data:/server/AbioticFactor/Saved
-      - ./sandbox.ini:/Config/WindowsServer/sandbox.ini
+      - ./sandbox.ini:/server/AbioticFactor/Saved/Config/WindowsServer/sandbox.ini
