@@ -1,0 +1,18 @@
+services:
+  cs:
+    image: cajuclc/cstrike-docker
+    restart: always
+    ports:
+      - 27016:27016/udp
+      - 27016:27016/tcp
+    environment:
+      - PORT=27016
+      - MAP=fy_pool_day
+      - MAXPLAYERS=16
+      - SV_LAN=1
+
+    volumes:
+      - ./server.cfg:/home/steam/cstrike/cstrike/server.cfg
+      - ./mapcycle.txt:/home/steam/cstrike/cstrike/mapcycle.txt
+      - ./podbot.cfg:/home/steam/cstrike/cstrike/addons/podbot/podbot.cfg
+      - ./users.ini:/home/steam/cstrike/cstrike/addons/amxmodx/configs/users.ini
