@@ -1,6 +1,6 @@
 services:
   cs:
-    image: cajuclc/cstrike-docker
+    build: .
     restart: always
     ports:
       - 27016:27016/udp
