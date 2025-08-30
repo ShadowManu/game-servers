@@ -1,2 +1,2 @@
 FROM cajuclc/cstrike-docker
-COPY ./custom/ /home/steam/cstrike/cstrike/
+COPY --chown=steam:steam ./custom/ /home/steam/cstrike/cstrike/
