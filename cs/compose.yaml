@@ -20,3 +20,6 @@ services:
       - ./configs/plugins.ini:/home/steam/cstrike/cstrike/addons/amxmodx/configs/plugins.ini
       - ./configs/users.ini:/home/steam/cstrike/cstrike/addons/amxmodx/configs/users.ini
       - ./configs/podbot.cfg:/home/steam/cstrike/cstrike/addons/podbot/podbot.cfg
+
+      # Gamemode configs
+      - ./configs/gungame.cfg:/home/steam/cstrike/cstrike/addons/amxmodx/configs/gungame.cfg
